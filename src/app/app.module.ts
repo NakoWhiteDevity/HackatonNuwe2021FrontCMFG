@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Registro1Component } from './componentes/registro1/registro1.component';
+import { Registro2Component } from './componentes/registro2/registro2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Registro1Component
+    Registro1Component,
+    Registro2Component
   ],
   imports: [
     BrowserModule,
