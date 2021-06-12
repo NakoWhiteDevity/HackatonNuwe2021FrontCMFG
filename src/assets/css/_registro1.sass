@@ -1,3 +1,15 @@
+a
+    text-decoration: none
+.superior
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    p
+        color: lightgrey
+        padding: 10px
+        a
+            text-decoration: none
+            color: lightgreen
 .navegacion
     min-width: 100%
     min-height: 60%
@@ -6,46 +18,53 @@
     justify-content: left
     align-items: left
     flex-direction: column
-    .unete
-        font-size: 1.5rem
-        font-weight: 700
-    .paraempezar
-        color: lightgrey
-    .botonregistro
-        display: flex
-        margin: 20px 0px
-        padding: 10px 20px
-        max-width: 40%
-        border-radius: 5px
-        border: 2px solid lightgrey
-        .icono,.flechavance
+    .presentacion
+        .unete
+            font-size: 1.5rem
+            font-weight: 700
+            margin: 0px
+            padding: 0px
+        .paraempezar
+            color: lightgrey
+            margin: 0px
+            padding: 0px
+    .botones
+        margin-top: 50px
+        .botonregistro
             display: flex
-            justify-content: center
-            align-items: center
-            min-height: 100%
-            max-width: 15%
-            i
-                padding: 30px
-                font-size: 1.5rem
-                color: lightgrey
-        .texto
-            min-height:100%
-            min-width: 50%
-            .titulo,.subtitulo
-                min-width: 100%
-                min-height: 50%
-                margin: 0px
-                padding: 0px 15px
-                display: flex
-                justify-content: left
-                align-items: center
-            .titulo
-                font-size: 0.9rem
-                font-weight: 700
-            .subtitulo
-                font-size: 0.7rem
-        &:hover
-            border: 2px solid green
+            margin: 20px 0px
+            padding: 10px 20px
+            max-width: 40%
+            border-radius: 5px
+            border: 2px solid lightgrey
             .icono,.flechavance
+                display: flex
+                justify-content: center
+                align-items: center
+                min-height: 100%
+                max-width: 15%
                 i
-                    color: lightgreen
+                    padding: 30px
+                    font-size: 1.5rem
+                    color: lightgrey
+            .texto
+                min-height:100%
+                min-width: 50%
+                .titulo,.subtitulo
+                    min-width: 100%
+                    min-height: 50%
+                    margin: 0px
+                    padding: 0px 15px
+                    display: flex
+                    justify-content: left
+                    align-items: center
+                .titulo
+                    font-size: 0.9rem
+                    font-weight: 700
+                .subtitulo
+                    font-size: 0.7rem
+            &:hover
+                border: 2px solid green
+                .icono,.flechavance
+                    i
+                        color: lightgreen
