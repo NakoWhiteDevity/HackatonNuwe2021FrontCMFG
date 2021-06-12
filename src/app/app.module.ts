@@ -18,7 +18,7 @@ import { Registro3Component } from './componentes/registro3/registro3.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
