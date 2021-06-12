@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { Registro1Component } from './componentes/registro1/registro1.component';
 import { Registro2Component } from './componentes/registro2/registro2.component';
+import { Registro3Component } from './componentes/registro3/registro3.component';
 
 const routes: Routes = [
   { path: '' , component:Registro1Component },
   { path: 'r2' , component:Registro2Component },
+  { path: 'r3' ,component:Registro3Component },
   { path: '', pathMatch: 'full', redirectTo : 'inicio' },
   { path: '**', pathMatch: 'full', redirectTo : 'inicio' }
 ];

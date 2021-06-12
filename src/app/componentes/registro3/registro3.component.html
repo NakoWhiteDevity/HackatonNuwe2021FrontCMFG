@@ -1,1 +1,49 @@
-<p>registro3 works!</p>
+<div class="superior2">
+    
+    <a href="/">
+        <div class="anterior">
+            <i class="fas fa-chevron-left"></i>
+            <p>Volver</p>
+        </div>
+    </a>
+
+    <div class="posterior">
+        <p class="paso">Paso 02/03</p>
+        <p class="pi">Localización</p>
+    </div>
+
+</div>
+
+<div class="navegacion">
+    
+    <div class="presentacion">
+        <p class="unete">Completa tu perfil.</p>
+        <p class="paraempezar">Para poder revisar que se trata de una cuenta real, precisamos de la siguiente información</p>
+    </div>
+    
+    <div class="formulario1">
+        <form autocomplete="off" [formGroup]="form2" (ngSubmit)="avanzar()" >
+            
+            <div class="objform" >
+                <label>número de teléfono *</label>
+                <input type="text" formControlName="tel">
+            </div>
+
+            <div class="objform" >
+                <label>Dirección *</label>
+                <input type="text" formControlName="dir">
+            </div>
+
+            <div class="objform" >
+                <label>Pais de residencia *</label>
+                <input type="password" formControlName="con">
+            </div>
+
+            <div class="objform">
+                <button type="submit" class="botonsubmit">Guardar y continuar</button>
+            </div>
+        
+        </form>
+    </div>
+
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro2',
@@ -10,11 +11,11 @@ export class Registro2Component implements OnInit {
 
   form1 : FormGroup;
   
-  constructor( private _fb:FormBuilder ){
+  constructor( private _fb:FormBuilder , private _r:Router ){
     this.form1 = this._fb.group({
-      nc : ['',[Validators.required,Validators.minLength(2)]],
-      email : ['',[Validators.required,Validators.minLength(2)]],
-      pass : ['',[Validators.required,Validators.minLength(2)]],
+      nc : ['',[Validators.required]],
+      email : ['',[Validators.required]],
+      pass : ['',[Validators.required]],
       tyc : [false,[Validators.required]]
     });
   }
@@ -23,7 +24,13 @@ export class Registro2Component implements OnInit {
   }
 
   avanzar(){
-    this.form1.valid ? console.log("VALIDO",this.form1.value) : console.log("INVALIDO",this.form1.value) ; this.form1.reset();
+    if (this.form1.valid){
+      console.log("VALIDO",this.form1.value);
+      this._r.navigate(['r3']);
+    } else {
+      console.log("INVALIDO",this.form1.value);
+      this.form1.reset();
+    }
   }
 
 }
