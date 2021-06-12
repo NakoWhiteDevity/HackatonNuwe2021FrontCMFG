@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-registro2',
@@ -12,15 +12,18 @@ export class Registro2Component implements OnInit {
   
   constructor( private _fb:FormBuilder ){
     this.form1 = this._fb.group({
-      NombreCompleto : ['',[Validators.required]],
-      CorreoElectronico : ['',[Validators.required,Validators.email]],
-      Contrasenia : ['',[Validators.required]],
-    })
+      NombreCompleto : ['', [Validators.required]],
+      CorreoElectronico : ['', [Validators.required]],
+      Contrasenia : ['', [Validators.required]],
+      tyc : [false, Validators.required]
+    });
   }
 
   ngOnInit(): void {
   }
 
-  avanzar(){}
+  avanzar(){
+    this.form1.valid ? console.log("VALIDO",this.form1.value) : console.log("INVALIDO",this.form1.value);
+  }
 
 }

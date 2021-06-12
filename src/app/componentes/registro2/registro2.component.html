@@ -26,20 +26,32 @@
             
             <div class="objform" >
                 <label>Nombre *</label>
-                <input type="text" placeholder="" FormControlName="nombreCompleto">
+                <input type="text" class="prueba" FormControlName="NombreCompleto">
             </div>
 
             <div class="objform" >
                 <label>Correo Electrónico *</label>
-                <input type="text" placeholder="" FormControlName="nombreCompleto">
+                <input type="text" FormControlName="CorreoElectronico">
             </div>
 
             <div class="objform" >
                 <label>Contraseña *</label>
-                <input type="text" placeholder="" FormControlName="nombreCompleto">
+                <input type="text" FormControlName="Contrasenia">
+            </div>
+            
+            <div class="objform2" >
+                <label><input type="checkbox" placeholder="" FormControlName="tyc">Acepto términos y condiciones.</label>
+            </div>
+
+            <div class="objform">
+                <button type="submit" class="botonsubmit">Crear cuenta</button>
             </div>
         
         </form>
     </div>
 
 </div>
+
+<pre>
+    {{form1.value | json}}
+</pre>
