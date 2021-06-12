@@ -5,7 +5,7 @@ import { Registro2Component } from './componentes/registro2/registro2.component'
 
 const routes: Routes = [
   { path: '' , component:Registro1Component },
-  { path: '' , component:Registro2Component },
+  { path: 'r2' , component:Registro2Component },
   { path: '', pathMatch: 'full', redirectTo : 'inicio' },
   { path: '**', pathMatch: 'full', redirectTo : 'inicio' }
 ];
