@@ -23,7 +23,7 @@ export class Registro2Component implements OnInit {
   }
 
   avanzar(){
-    this.form1.valid ? console.log("VALIDO",this.form1.value) : console.log("INVALIDO",this.form1.value);
+    this.form1.valid ? console.log("VALIDO",this.form1.value) : console.log("INVALIDO",this.form1.value) ; this.form1.reset();
   }
 
 }
