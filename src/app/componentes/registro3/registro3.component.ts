@@ -9,18 +9,18 @@ import { PaisAPIService } from 'src/app/servicios/pais-api.service';
 })
 export class Registro3Component implements OnInit {
 
-  constructor( private _fb:FormBuilder , private _pas:PaisAPIService ){
+  form2 : FormGroup;
+  
+  constructor( private _fb:FormBuilder , public _pas:PaisAPIService ){
     this.form2 = this._fb.group({
       tel : ['',[Validators.required]],
+      pais : ['',[Validators.required]],
       dir : ['',[Validators.required]],
       con : ['',[Validators.required]]
     })
   }
 
-  form2 : FormGroup;
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   avanzar(){
     console.log(this.form2);

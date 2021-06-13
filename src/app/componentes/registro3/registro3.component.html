@@ -36,7 +36,10 @@
 
             <div class="objform" >
                 <label>Pais de residencia *</label>
-                <input type="password" formControlName="con">
+                <select formControlName="pais" class="selectpais">
+                    <option *ngFor="let pais of _pas.paises"
+                            value="{{pais.nombre}}">{{pais.nombre}}</option>
+                </select>
             </div>
 
             <div class="objform">
@@ -46,4 +49,8 @@
         </form>
     </div>
 
+    
+
 </div>
+
+<div class="infosegura"><p><i class="fas fa-lock"></i>Tu información es segura</p></div>
