@@ -6,3 +6,7 @@ Hola evaluadora o evaluador. Este es mi proyecto para participar en esta Hackato
 
 - En la raiz del proyecto, ejecuta en terminal `npm install` y espere a la instalación de todos los paquetes.
 - Ejecuta en terminal `ng serve` . En la direccion `http://localhost:4200/` podrá ver el proyecto en funcionamiento.
+
+## ¿En que consistia la prueba?
+
+Puedes ver el enunciado del ejercicio descargando el fichero `frontend.html` dentro de la carpeta `enunciado` y abriéndolo con tu navegador de internet.
