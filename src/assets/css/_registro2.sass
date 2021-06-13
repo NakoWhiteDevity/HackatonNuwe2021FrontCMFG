@@ -40,8 +40,14 @@ a
             min-width: 100%
             color: grey
             margin: 5px 0px
-        input
+        input[type="text"],input[type="password"]
             padding: 5px 20px
+            border: 1px solid lightgrey
+            border-radius: 5px
+            &:focus
+                outline: none
+                box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.3)
+                border: 1px solid green
         button
             margin-bottom: 15px
             &:hover
