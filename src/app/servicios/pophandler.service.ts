@@ -8,7 +8,7 @@ export class PophandlerService {
 
   sujetopop$ = new Subject<[boolean,number]>();
   
-  constructor() {}
+  constructor(){}
 
   
 

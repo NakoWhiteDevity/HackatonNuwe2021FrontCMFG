@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PophandlerService } from 'src/app/servicios/pophandler.service';
 
 @Component({
   selector: 'app-registro4',
@@ -10,7 +11,7 @@ export class Registro4Component implements OnInit {
 
   form3 : FormGroup;
   
-  constructor( private _fb:FormBuilder ){
+  constructor( private _fb:FormBuilder , private _ph:PophandlerService){
     this.form3 = this._fb.group({
       tarjeta : ['',[Validators.required]],
       ns : ['',Validators.required]
@@ -33,6 +34,10 @@ export class Registro4Component implements OnInit {
         if(this.form3.value.ns.length == 3) {caso = true} else {caso = false} ; break ;
     }
     return caso;
+  }
+
+  registro(){
+    this._ph.sujetopop$.next([true,1])
   }
 
 }

@@ -1,7 +1,16 @@
-<div class="popfallo1" *ngIf="estado == [true,0]" >
+<div class="popfallo1" *ngIf="estado[0] == true && estado[1] == 0" >
     <p class="mainfallo">¡ Ups, algo ha ido mal !</p>
     <p class="detalles">El correo electrónico introducido ya esta en uso. Revíselo e inténtelo de nuevo.</p>
     <div class="botonera">
-        <button class="cerrar">Cerrar</button>
+        <button class="cerrar" (click)="cerrado()" >Cerrar</button>
+    </div>
+</div>
+
+<div class="popfallo1" *ngIf="estado[0] == true && estado[1] == 1" >
+    <p class="mainfallo">¡Todo guay!</p>
+    <p class="detalles">Tu cuenta se ha creado correctamente</p>
+    <div class="botonera">
+        <button class="cerrar" (click)="cerrado()" >Cerrar</button>
+        <button class="cerrar2" (click)="cerrado()" >Vamos para Nuwe</button>
     </div>
 </div>

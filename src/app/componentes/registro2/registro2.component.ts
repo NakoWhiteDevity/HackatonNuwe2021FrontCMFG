@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { PophandlerService } from 'src/app/servicios/pophandler.service';
 
 @Component({
   selector: 'app-registro2',
@@ -11,7 +12,7 @@ export class Registro2Component implements OnInit {
 
   form1 : FormGroup;
   
-  constructor( private _fb:FormBuilder , private _r:Router ){
+  constructor( private _fb:FormBuilder , private _r:Router, private _ph:PophandlerService ){
     this.form1 = this._fb.group({
       nc : ['',[Validators.required]],
       email : ['',[Validators.required]],
@@ -31,6 +32,10 @@ export class Registro2Component implements OnInit {
       console.log("INVALIDO",this.form1.value);
       this.form1.reset();
     }
+  }
+
+  fallo(){
+    this._ph.sujetopop$.next([true,0]);
   }
 
 }

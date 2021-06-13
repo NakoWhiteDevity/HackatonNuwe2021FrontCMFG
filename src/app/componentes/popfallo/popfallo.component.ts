@@ -11,10 +11,16 @@ export class PopfalloComponent implements OnInit {
   estado:[boolean,number] = [false,0];
   
   constructor( public _ph:PophandlerService ){
-    this._ph.sujetopop$.subscribe(resp => this.estado = resp);
+    this._ph.sujetopop$.subscribe(resp => {
+      this.estado = resp;
+    });
   }
 
   ngOnInit(): void {
+  }
+
+  cerrado(){
+    this._ph.sujetopop$.next([false,0]);
   }
 
 }
